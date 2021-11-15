@@ -1,15 +1,17 @@
-import React ,{ useState } from "react";
+import React, { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 
-import "./navbar.css"
+import "./navbar.css";
 import FirstDropDown from "../Dropdowns/firstdropdown";
 import SecDropDown from "../Dropdowns/secdropdown";
+import ThirdDropDown from "../Dropdowns/thirddropdown";
 
 export default function Navbar() {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   const [dropdowns, setDropdowns] = useState(false);
-  const [change, setChange] = useState(false);
+  const [dropdownn, setDropdownn] = useState(false);
+
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -45,17 +47,31 @@ export default function Navbar() {
       setDropdowns(false);
     }
   };
+  const onMouseEnterT = () => {
+    if (window.innerWidth < 960) {
+      setDropdownn(false);
+    } else {
+      setDropdownn(true);
+    }
+  };
+
+  const onMouseLeaveT = () => {
+    if (window.innerWidth < 960) {
+      setDropdownn(false);
+    } else {
+      setDropdownn(false);
+    }
+  };
 
   return (
     <div className="nav">
       <nav className="navbar">
         <HashLink
           smooth
-          to="/"
+          to="/#top"
           className="navbar-logo"
           onClick={() => {
             closeMobileMenu();
-            setChange(false);
           }}
         >
           <img src="./IUS.png" alt=" IUS Logo" />
@@ -65,19 +81,19 @@ export default function Navbar() {
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
-          <li className="nav-item "
-          onMouseEnter={onMouseEnterF}
-          onMouseLeave={onMouseLeaveF}
+          <li
+            className="nav-item "
+            onMouseEnter={onMouseEnterF}
+            onMouseLeave={onMouseLeaveF}
           >
             <HashLink
-              to="HowWeWork"
+              to="/howwework#top"
               className="nav-links"
               onClick={() => {
                 closeMobileMenu();
-                setChange(true);
               }}
             >
-              How We Work  <i className="fas fa-caret-down" />
+              How We Work <i className="fas fa-caret-down" />
             </HashLink>
             {dropdown && <FirstDropDown />}
           </li>
@@ -87,53 +103,34 @@ export default function Navbar() {
             onMouseLeave={onMouseLeaveS}
           >
             <HashLink
-              to="/whatwedo"
+              to="/whatwedo#top"
               className="nav-links"
               onClick={() => {
                 closeMobileMenu();
-                setChange(true);
               }}
             >
               What We Do <i className="fas fa-caret-down" />
             </HashLink>
             {dropdowns && <SecDropDown />}
           </li>
-          <li className="nav-item">
+          <li
+            className="nav-item"
+            onMouseEnter={onMouseEnterT}
+            onMouseLeave={onMouseLeaveT}
+          >
             <HashLink
-              to="/whoweare"
+              to="/whoweare#top"
               className="nav-links"
               onClick={() => {
                 closeMobileMenu();
-                setChange(true);
               }}
             >
-              Who we are
+              Who we are <i className="fas fa-caret-down" />
             </HashLink>
+            {dropdownn && <ThirdDropDown />}
           </li>
-          <li className="nav-item">
-            <HashLink
-              to="/contact-us"
-              className="nav-links"
-              onClick={() => {
-                closeMobileMenu();
-                setChange(true);
-              }}
-            >
-              Contact Us
-            </HashLink>
-          </li>
-          <li>
-            <HashLink
-              to="/donate"
-              className="nav-links-mobile"
-              onClick={() => {
-                closeMobileMenu();
-                setChange(true);
-              }}
-            >
-              Donate
-            </HashLink>
-          </li>
+          
+         
         </ul>
       </nav>
     </div>

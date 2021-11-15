@@ -1,6 +1,6 @@
 import React from 'react'
 import "./home.css";
-
+import { HashLink } from 'react-router-hash-link';
 function Component(props) {
     return (
         <div className="component">
@@ -11,7 +11,13 @@ function Component(props) {
             </div>
             <div className="component-text">
                 {props.text}
+                <div className="wrap-links center-it">
+              <HashLink to={props.url} className="primary">
+                Learn More
+              </HashLink>
             </div>
+            </div>
+            
         </div>
     )
 }

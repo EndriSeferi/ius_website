@@ -1,37 +1,31 @@
-import React from 'react'
+import React from "react";
 import {
-    AiFillInstagram,
-    AiFillLinkedin,
-    AiFillTwitterCircle,
-    AiFillYoutube,
-    AiFillFacebook,
-  } from "react-icons/ai";
-import Footer from './Footer';
+  AiFillInstagram,
+  AiFillLinkedin,
+  AiFillYoutube,
+  AiFillFacebook,
+} from "react-icons/ai";
+
 function Media() {
-    return (
-   
-        <div className="media-links center-it corners" data-aos="zoom-in">
-            <a href="https://instagram.com/qendraius" className="links">
-              <AiFillInstagram />
-            </a>
-            <a
-              href="https://linkedin.com/in/ius-center-6859a6213"
-              className="links"
-            >
-              <AiFillLinkedin />
-            </a>
-            <a href="" className="links">
-              <AiFillTwitterCircle />
-            </a>
-            <a href="" className="links">
-              <AiFillYoutube />
-            </a>
-            <a href="https://facebook.com/qendraius" className="links">
-              <AiFillFacebook />
-            </a>
-          </div>
-       
-    )
+  return (
+    <div className="media-links center-it corners" data-aos="zoom-in">
+      <a href="https://instagram.com/qendraius/" className="links">
+        <AiFillInstagram />
+      </a>
+      <a href="https://linkedin.com/company/iuscenteral" className="links">
+        <AiFillLinkedin />
+      </a>
+      <a
+        href="https://youtube.com/channel/UCOV1p25pAZSTbiLvo9bj4Eg"
+        className="links"
+      >
+        <AiFillYoutube />
+      </a>
+      <a href="https://facebook.com/qendraius" className="links">
+        <AiFillFacebook />
+      </a>
+    </div>
+  );
 }
 
-export default Media
+export default Media;

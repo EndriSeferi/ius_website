@@ -1,18 +1,19 @@
 export const FirstMenuItems = [
     {
-      title: 'Programs',
-      path: '/whatwedo#programs',
+      title: 'Resources',
+      path: '/howwework#resources',
       cName: 'dropdown-link'
     },
     {
-      title: 'Events',
-      path: '/whatwedo#events',
+      title: 'Partners',
+      path: '/howwework#partners',
       cName: 'dropdown-link'
     },
     {
-      title: 'Publications',
-      path: '/whatwedo#publications',
+      title: 'Community Impact',
+      path: '/howwework#community',
       cName: 'dropdown-link'
     }
+    
   ];
   

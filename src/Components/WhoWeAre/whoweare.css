@@ -1,0 +1,118 @@
+.vision{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4rem 0;
+  }
+  .vision-text{
+    width: 50%;
+  }
+  .vision-text h2{
+    padding-bottom: 2rem;
+  }
+  .corners3 img {
+    margin: 1rem;
+    width: 80%;
+  }
+  .corners3 {
+    width: 45%;
+    background: linear-gradient(to right, black 1px, transparent 1px) 0 0,
+      linear-gradient(to left, black 1px, transparent 1px) 100% 100%,
+      linear-gradient(to bottom, black 1px, transparent 1px) 0 0,
+      linear-gradient(to top, black 1px, transparent 1px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    margin: 1rem;
+  }
+  
+  .staff{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .staff-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .staff-title::before ,.staff-title::after{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: black;
+    margin: 0 1rem;
+  }
+  .staff-cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .card{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 2.5rem 2.5rem;
+  }
+  .card h4{
+    margin: 1rem 0;
+  }
+  .card p{
+    text-align: center;
+  }
+  .card img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .news{
+    margin-top: 2rem;
+  }
+  .news-title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .news-title::before{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: black;
+    margin: 0 1rem;
+  }
+  .news-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .news-card{
+    display: flex;
+    width: 30%;
+    margin: 2rem 2rem;
+    height: 150px;
+    background-color: gray;
+    padding: .5rem;
+  }
+  .news-card img{
+    width: 35%;
+  }
+  .news-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  .news-info p{
+    font-size: 10px;
+  }

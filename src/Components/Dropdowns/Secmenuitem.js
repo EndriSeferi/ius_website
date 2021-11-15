@@ -1,18 +1,23 @@
 export const SecMenuItems = [
-    {
-      title: 'Testing',
-      path: '/whatwedo#programs',
-      cName: 'dropdown-link'
-    },
-    {
-      title: 'Testing2',
-      path: '/whatwedo#events',
-      cName: 'dropdown-link'
-    },
-    {
-      title: 'Testing3',
-      path: '/whatwedo#publications',
-      cName: 'dropdown-link'
-    }
+  {
+    title: 'Resources',
+    path: '/whatwedo#resources',
+    cName: 'dropdown-link'
+  },
+  {
+    title: 'Events',
+    path: '/whatwedo#events',
+    cName: 'dropdown-link'
+  },
+  {
+    title: 'Publications',
+    path: '/whatwedo#publications',
+    cName: 'dropdown-link'
+  },
+  {
+    title: 'Projects',
+    path: '/whatwedo#projects',
+    cName: 'dropdown-link'
+  }
   ];
   
