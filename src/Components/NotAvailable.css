@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.content-not__available {
+  background-color: rgb(231, 231, 231);
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 8px 8px 20px black;
+  margin: 1rem 0;
+}
